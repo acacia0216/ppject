@@ -1,4 +1,4 @@
-package AddressBook;
+package addressbook;
 
 public class PersonInfo {
 	String name, hp, cp;
@@ -28,9 +28,9 @@ public class PersonInfo {
 		this.cp = cp;
 	}
 	public void getInfo() {
-		System.out.println("이름 : "+name);
-		System.out.println("핸드폰 : "+hp);
-		System.out.println("회사 : "+cp);
+		System.out.print("이름 : "+name);
+		System.out.print("   핸드폰 : "+hp);
+		System.out.print("   회사 : "+cp);
 		System.out.println();
 	}
 	

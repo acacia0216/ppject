@@ -1,4 +1,4 @@
-package RestraurantManagement;
+package restaurantmanagement;
 
 import java.util.Scanner;
 

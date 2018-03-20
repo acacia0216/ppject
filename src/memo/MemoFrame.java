@@ -38,32 +38,32 @@ public class MemoFrame extends JFrame implements ActionListener, UndoableEditLis
 	private static final long serialVersionUID = 1L;
 	JFrame frame = new JFrame();//�����ӻ���
 	JMenuBar menuBar = new JMenuBar();//�޴��� ����
-	JMenu mFile = new JMenu("����");//�޴�1
-	JMenu mEdit = new JMenu("����");//�޴�2
-	JMenu mFormat = new JMenu("����");//�޴�3
+	JMenu mFile = new JMenu("파일");//�޴�1
+	JMenu mEdit = new JMenu("편집");//�޴�2
+	JMenu mFormat = new JMenu("서식");//�޴�3
 	JMenu mHelp = new JMenu("Help");//�޴�4)
 	
 	//���ϸ޴� ������ ����
-	JMenuItem f1 = new JMenuItem("���θ����");
-	JMenuItem f2 = new JMenuItem("�ҷ�����");
-	JMenuItem f3 = new JMenuItem("����");
-	JMenuItem f4 = new JMenuItem("�ٸ��̸����� ����");
-	JMenuItem f5 = new JMenuItem("����");
+	JMenuItem f1 = new JMenuItem("새로만들기");
+	JMenuItem f2 = new JMenuItem("불러오기");
+	JMenuItem f3 = new JMenuItem("저장");
+	JMenuItem f4 = new JMenuItem("다른이름으로 저장");
+	JMenuItem f5 = new JMenuItem("종료");
 
 	//�����޴� ������ ����
-	JMenuItem e1 = new JMenuItem("����");
-	JMenuItem e2 = new JMenuItem("�߶󳻱�");
-	JMenuItem e3 = new JMenuItem("�ٿ��ֱ�");
-	JMenuItem e4 = new JMenuItem("�������");
-	JMenuItem e5 = new JMenuItem("�ٽý���");
+	JMenuItem e1 = new JMenuItem("복사");
+	JMenuItem e2 = new JMenuItem("잘라내기");
+	JMenuItem e3 = new JMenuItem("붙여넣기");
+	JMenuItem e4 = new JMenuItem("되돌리기");
+	JMenuItem e5 = new JMenuItem("재실행");
 	
 	//���ĸ޴� ������ ����
-	JMenuItem o1 = new JMenuItem("�۲�");
+	JMenuItem o1 = new JMenuItem("글꼴");
 	
 	//���򸻸޴� ������ ����
-	JMenuItem h1 = new JMenuItem("��������");
-	JMenuItem h2 = new JMenuItem("�ǵ�� ������");
-	JMenuItem h3 = new JMenuItem("����");
+	JMenuItem h1 = new JMenuItem("버전정보");
+	JMenuItem h2 = new JMenuItem("피드백");
+	JMenuItem h3 = new JMenuItem("도움말");
 	
 	JTextArea textBox = new JTextArea();//�ؽ�Ʈ�ڽ� ����
 	JScrollPane scroll = new JScrollPane(textBox);//��ũ�� �����ؼ� �ؽ�Ʈ�ڽ� �ֱ�
@@ -168,7 +168,7 @@ public class MemoFrame extends JFrame implements ActionListener, UndoableEditLis
 			if(textBox != null)
 				{
 					JFileChooser jc=new JFileChooser(); 
-					int r= JOptionPane.showConfirmDialog(this,"�����Ͻðڽ��ϱ�?","���θ����",JOptionPane.YES_NO_OPTION); //Ȯ��â ����
+					int r= JOptionPane.showConfirmDialog(this,"새로만들기",JOptionPane.YES_NO_OPTION); //Ȯ��â ����
 					if(r==0)// �� ���� ��� ����
 						{  
 						jc.showSaveDialog(this); //����Dialogâ ����
@@ -311,19 +311,19 @@ public class MemoFrame extends JFrame implements ActionListener, UndoableEditLis
 		//����h
         else if(ae.getSource()==h1)
         {
-        	 JOptionPane.showMessageDialog(null, "����������..."+'\n'+"�������̳׿�...","�޸��� ��������", JOptionPane.WARNING_MESSAGE);
+        	 JOptionPane.showMessageDialog(null, "버전"+'\n'+"정보","자리였나", JOptionPane.WARNING_MESSAGE);
         }
 		
 		//�ǵ��
         else if(ae.getSource()==h2)
         {
-        	JOptionPane.showMessageDialog(null,"�������� ������ ���Ϸ� �����ּ���"+'\n'+"acacia0216@naver.com"+'\n'+"�����մϴ�.", "�ǵ��", JOptionPane.WARNING_MESSAGE);
+        	JOptionPane.showMessageDialog(null,"피드백은 아래로"+'\n'+"acacia0216@naver.com"+'\n'+"보내주세요", JOptionPane.WARNING_MESSAGE);
         }
 		
 		//����
         else if(ae.getSource()==h3)
         {
-        	 JOptionPane.showMessageDialog(null, "���� �̼��ؼ�"+'\n'+"���� �����ٰ� ���׿�...;;", "����", JOptionPane.WARNING_MESSAGE);
+        	 JOptionPane.showMessageDialog(null, "도움말"+'\n'+"이었나?", "모르겠네", JOptionPane.WARNING_MESSAGE);
         }
 	}
 	

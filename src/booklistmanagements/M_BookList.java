@@ -1,4 +1,4 @@
-package BookListManagement;
+package booklistmanagements;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
